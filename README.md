@@ -1,1 +1,1 @@
-# subwayProject
+서브웨이 클론코딩 프랜차이즈 신청서, FAQ / 내 정보 수정 파트 사용언어(HTML, CSS , JS)
