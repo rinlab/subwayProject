@@ -313,7 +313,7 @@
                                                 <th scope="col">이름<span class="essImg"></span></th>
                                                 <td>
                                                     <span class="form_text" style="width:100%">
-                                                        <input maxlength="10" name="writer" placeholder="이름을 입력해주세요" type="text" readonly="readonly">
+                                                        <input maxlength="10" name="writer" placeholder="이름을 입력해주세요" type="text">
                                                     </span>
                                                 </td>
                                             </tr>
@@ -321,7 +321,7 @@
                                                 <th scope="col">연락처<span class="essImg"></span></th>
                                                 <td>
                                                     <span class="form_text" style="width:100%">
-                                                        <input id="qaContact" maxlength="15" placeholder="연락 가능한 전화번호를 입력해주세요" type="text" readonly="readonly">
+                                                        <input id="qaContact" maxlength="15" placeholder="연락 가능한 전화번호를 입력해주세요" type="text">
                                                     </span>
                                                 </td>
                                             </tr>
@@ -329,25 +329,26 @@
                                                 <th scope="col">이메일<span class="essImg"></span></th>
                                                 <td>
                                                     <span class="form_text" style="width:200px">
-                                                        <input maxlength="50" placeholder="이메일" type="text" readonly="readonly">
+                                                        <input maxlength="50" name="email1" placeholder="이메일" type="text">
                                                     </span>
-                                                    <span class="em">@</span>
+                                                    <span class="em" style="width: auto; ">@</span>
                                                     <span class="form_text" style="width:200px">
-                                                        <input id="qaEmail2" maxlength="50" type="text" readonly="readonly">
+                                                        <input name="email2" maxlength="50" type="text" readonly>
                                                     </span>
-                                                    <div class="form_select" style="width:196px; margin-left:7px;">
-                                                        <select readonly="readonly">
-                                                            <option value="" disabled="">직접입력</option>
+                                                    <div class="form_select" style="width:196px;">
+                                                        <select name="select_email" onchange="selectEmail(this)">
+                                                            <option value="" selected>선택하세요</option>
+                                                            <option value="1">직접입력</option>
                                                             <option value="naver.com">naver.com</option>
-                                                            <option value="hanmail.net" disabled="">hanmail.net</option>
-                                                            <option value="hotmail.com" disabled="">hotmail.com</option>
-                                                            <option value="nate.com" disabled="">nate.com</option>
-                                                            <option value="empas.com" disabled="">empas.com</option>
-                                                            <option value="dreamwiz.com" disabled="">dreamwiz.com</option>
-                                                            <option value="lycos.co.kr" disabled="">lycos.co.kr</option>
-                                                            <option value="korea.com" disabled="">korea.com</option>
-                                                            <option value="gmail.com" disabled="">gmail.com</option>
-                                                            <option value="hanmir.com" disabled="">hanmir.com</option>
+                                                            <option value="hanmail.net" >hanmail.net</option>
+                                                            <option value="hotmail.com" >hotmail.com</option>
+                                                            <option value="nate.com" >nate.com</option>
+                                                            <option value="empas.com" >empas.com</option>
+                                                            <option value="dreamwiz.com" >dreamwiz.com</option>
+                                                            <option value="lycos.co.kr" >lycos.co.kr</option>
+                                                            <option value="korea.com" >korea.com</option>
+                                                            <option value="gmail.com">gmail.com</option>
+                                                            <option value="hanmir.com" >hanmir.com</option>
                                                         </select>
                                                     </div>
                                                 </td>
@@ -489,5 +490,4 @@
         </div>
     </footer>
 </body>
-<script src="./js/franchiseApplication.js"></script>
 </html>
