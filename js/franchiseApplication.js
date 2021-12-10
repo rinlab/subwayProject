@@ -94,6 +94,16 @@ function changeSort2() {
     }
 }
 
+function selectEmail(sel){ 
+    let email2 = $('input[name=email2]');
+     // '1'인 경우 직접입력 
+     if($(sel).val() == "1"){ 
+         email2.attr('readonly', false); 
+         email2.val(''); 
+    } else { 
+        email2.attr('readonly', true); 
+        email2.val($(sel).val()); }
+}
 
 function changeRegion(){
     let region1_sort = document.querySelector('.region1_sort');

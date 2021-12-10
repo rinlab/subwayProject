@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    let stickyOffset = $('.content').offset();
+    let stickyOffset = $('.content_wrap').offset();
     $(window).scroll(function() {
         if($(document).scrollTop() > stickyOffset.top) {
             $('.content .logo').fadeIn();
@@ -15,13 +15,17 @@ $(document).ready(function() {
         return false;
     });
 
-    $('.faq_content li .question').on('click', (e) => {
-        if($(e.currentTarget).parent().hasClass('open')) {
-            $(e.currentTarget).parent().removeClass('open');
-            $(e.currentTarget).next().slideUp(300);
+    $('.branch_region ul li a').on('click', (e) => {
+        $('.branch_region ul li').removeClass('active');
+        $(e.currentTarget).parent().addClass('active');
+        if($(e.currentTarget).attr('href') == '#map1') {
+            $('#map1').addClass('active');
+            $('#map2').removeClass('active');
         } else {
-            $(e.currentTarget).parent().addClass('open');
-            $(e.currentTarget).next().slideDown(300);
+            $('#map2').addClass('active');
+            $('#map1').removeClass('active');
         }
+
+        return false;
     });
 });

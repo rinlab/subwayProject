@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    let stickyOffset = $('.content').offset();
+    let stickyOffset = $('.content_wrap').offset();
     $(window).scroll(function() {
         if($(document).scrollTop() > stickyOffset.top) {
             $('.content .logo').fadeIn();
@@ -14,14 +14,14 @@ $(document).ready(function() {
         $('html').animate({ scrollTop : 0 }, 400);
         return false;
     });
+    
+    $('.store').mouseover(function() {
+        $('.store').addClass('hover');
+        $('.nation').removeClass('hover');
+    });
 
-    $('.faq_content li .question').on('click', (e) => {
-        if($(e.currentTarget).parent().hasClass('open')) {
-            $(e.currentTarget).parent().removeClass('open');
-            $(e.currentTarget).next().slideUp(300);
-        } else {
-            $(e.currentTarget).parent().addClass('open');
-            $(e.currentTarget).next().slideDown(300);
-        }
+    $('.nation').mouseover(function() {
+        $('.nation').addClass('hover');
+        $('.store').removeClass('hover');
     });
 });
